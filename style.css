@@ -1,0 +1,114 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  
+    header {
+      h1 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 30px;
+      }
+    }
+  
+    main {
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+  
+        .form-group {
+          label {
+            font-size: 1rem;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+          }
+  
+          input[type="text"],
+          select {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: border 0.3s;
+  
+            &:focus {
+              border: 1px solid #007bff;
+              outline: none;
+            }
+          }
+        }
+  
+        button {
+          padding: 12px;
+          background-color: #007bff;
+          color: #fff;
+          font-size: 1rem;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+  
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+  
+      #result {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: #333;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 500px) {
+    .container {
+      padding: 20px;
+  
+      header {
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+  
+      button {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  

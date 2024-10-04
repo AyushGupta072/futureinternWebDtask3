@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Main container for the converter -->
+  <div class="container" role="main">
+    <!-- Header with descriptive text -->
+    <header>
+      <h1>Temperature Converter</h1>
+      <p>Convert between Celsius, Fahrenheit, and Kelvin quickly and accurately.</p>
+    </header>
+
+    <!-- Main section for temperature conversion -->
+    <main>
+      <!-- Conversion form -->
+      <form id="converter-form" aria-labelledby="temperature-converter">
+        <div class="form-group">
+          <label for="temperature" id="temperature-label">Enter Temperature</label>
+          <input 
+            type="text" 
+            id="temperature" 
+            name="temperature" 
+            placeholder="Enter value" 
+            aria-required="true" 
+            aria-describedby="temperatureHelp" 
+            aria-invalid="false" 
+            autocomplete="off"
+          />
+          <small id="temperatureHelp" class="form-text">Please enter a numeric value.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="unit" id="unit-label">Select Unit</label>
+          <select id="unit" name="unit" aria-required="true" aria-labelledby="unit-label">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button type="button" id="convert" aria-label="Convert Temperature">Convert</button>
+        </div>
+
+        <!-- Section for displaying the conversion result -->
+        <div id="result" aria-live="polite" aria-atomic="true" role="status"></div>
+      </form>
+    </main>
+
+    <!-- Footer for extra information or links -->
+    <footer>
+      <p>Temperature conversion provided by Pro Tools, Inc. &copy; 2024</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
